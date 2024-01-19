@@ -1,0 +1,3608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Organic</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/orfarm.css">
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Jost&family=Roboto&display=swap" rel="stylesheet">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Jost', sans-serif !important;
+			color: #4d5574;
+			background-color: #f2f2f6;
+		}
+
+		.b-1 {
+			border-top: 1px solid rgba(128, 128, 128, 0.123);
+		}
+
+		.bg-white {
+			background-color: #fff;
+			position: sticky;
+			top: 0;
+			left: 0;
+			z-index: 9;
+			padding-top: 30px;
+		}
+
+		.food-offer-container {
+			text-align: center;
+		}
+
+		.pro-heading {
+			font-family: 'Schoolbell', cursive;
+			font-size: 18px;
+			line-height: 25px;
+			margin-bottom: 5px;
+			color: #96ae00;
+			text-align: center;
+		}
+
+		.food-offer-container h2,
+		.product-section h3,
+		.blog-section h3 {
+			font-family: 'Quicksand', sans-serif;
+			font-size: 27px;
+			font-weight: 700;
+			line-height: 38px;
+			letter-spacing: -.03em;
+			color: #2d2a6e;
+			text-align: center;
+		}
+
+		.food-offer-container p,
+		.blog-para {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22px;
+			margin-top: 13px;
+			text-align: center;
+		}
+
+
+		.img-hover {
+			cursor: pointer;
+			width: 100%;
+			background-color: #fff;
+			position: relative;
+
+		}
+
+		.img-hover:hover .img-box {
+			display: none;
+			transition: all .5s ease 0s;
+		}
+
+		.img-hover .img-box2 {
+			display: none;
+			transition: all .5s ease 0s;
+
+		}
+
+		.img-hover:hover .img-box2 {
+			display: block;
+		}
+
+		.button-box {
+			position: absolute;
+			top: 12%;
+			text-align: center;
+			z-index: 100;
+			font-size: 0;
+			transition: all 0.8s ease-in-out;
+			right: 10px;
+			left: auto;
+			display: none;
+
+		}
+
+		.icon-1:hover .quick-link {
+			visibility: visible;
+			opacity: 1;
+		}
+
+
+		.icon-1 {
+
+			display: block;
+			margin-bottom: 10px;
+			z-index: 5;
+			opacity: 1;
+			height: 35px !important;
+			width: 35px !important;
+			padding: 0;
+			text-align: center;
+			background-color: #fff;
+			position: relative;
+			cursor: pointer;
+			border-radius: 50%;
+			outline: none;
+		}
+
+		.icon-1 i {
+			font-size: 14px;
+			color: rgb(91, 91, 91);
+			line-height: 35px;
+		}
+
+		.icon-1:hover {
+			background-color: #96ae00;
+
+		}
+
+		.icon-1:hover i {
+			color: #fff;
+		}
+
+
+		.img-hover:hover .button-box {
+			display: block;
+		}
+
+		.sale-box {
+			font-size: 14px;
+			color: #fff;
+			text-align: center;
+			display: block;
+			width: 40px;
+			font-weight: 200;
+			z-index: 7;
+			border-radius: 3px;
+
+			position: absolute;
+			top: 10px;
+			background-color: #96ae00;
+			left: 20px;
+		}
+
+		.sale-box1 {
+			font-size: 14px;
+			font-weight: 200;
+			color: #fff;
+			text-align: center;
+			display: block;
+			width: 40px;
+			z-index: 7;
+			border-radius: 3px;
+			position: absolute;
+			top: 10px;
+			background-color: #12b7ce;
+			left: 20px;
+		}
+
+		.card-body-1 {
+			background-color: #f7f7f9;
+			margin: 5px;
+			padding: 15px;
+			transition: all .5s ease 0s;
+		}
+
+		.card-body-1:hover .cart-btn {
+			display: block;
+		}
+
+		.card-title-1 {
+			font-size: 13px;
+			line-height: 17px;
+			color: rgba(128, 128, 128, 0.694);
+		}
+
+		.card-text-1 {
+			font-weight: 400;
+			margin-bottom: 10px;
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			line-height: 20px;
+			max-height: 40px;
+			color: #2d2a6e;
+
+			height: 40px;
+		}
+
+		.price {
+			color: #ea0d42;
+			font-weight: 600;
+		}
+
+		.cart-btn {
+			font-size: 14px;
+			height: 40px;
+			line-height: 43px;
+			padding: 0 30px;
+			border-radius: 30px;
+			text-transform: uppercase;
+			font-weight: 600;
+			transition: all .3s ease;
+			text-align: center;
+			display: inline-block;
+			outline: none !important;
+			color: #fff;
+			margin-top: 10px;
+			background-color: #96ae00;
+			text-decoration: none;
+			display: none;
+		}
+
+		.cart-btn:hover {
+			background-color: #6d7d09;
+			color: #fff;
+		}
+
+
+		.quick-link {
+			font-size: 13px;
+			font-weight: 400;
+			right: calc(100% + 7px);
+			line-height: 20px;
+			padding: 4px 10px;
+			position: absolute;
+			white-space: nowrap;
+			border-radius: 2px;
+			transform: translate(-10px);
+			transition: all .5s ease 0s;
+			background-color: #000;
+			opacity: 0;
+			visibility: hidden;
+			color: #fff;
+			text-transform: capitalize;
+		}
+
+		.animate-box {
+			box-shadow: 2px 2px 2px rgba(2, 68, 126, 0.155);
+		}
+
+		.small-section-1 {
+			width: 249px;
+		}
+
+		.small-section-2 {
+			width: 249px;
+		}
+
+		.section-heading {
+			font-family: 'Schoolbell', cursive;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 25px;
+			margin-bottom: 2px;
+			color: #96ae00;
+		}
+
+		.section-main-heading {
+			font-size: 2.5rem;
+			font-weight: 600;
+			margin-bottom: 28px;
+			margin-top: 10px;
+		}
+
+		.section-para {
+			font-weight: 400;
+			line-height: 23px;
+			margin-bottom: 54px;
+			margin-top: 0;
+			font-size: 16px;
+		}
+
+		.nutriants-heading {
+			width: 240px !important;
+		}
+
+		.fruit-heading a,
+		.nutriants-heading a {
+			font-size: 15px;
+			font-weight: 600;
+			line-height: 20px;
+			color: #2d2a6e;
+			text-decoration: none;
+			border-width: 0 0 1px;
+			border-style: dashed;
+			border-color: #c2c2d3;
+			padding: 6px 0;
+			margin-right: 31px;
+			display: block;
+		}
+
+		.fruit-heading p,
+		.nutriants-heading p {
+			font-size: 16px;
+			padding: 10px 0;
+
+		}
+
+		.section-btn {
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 19px;
+			padding: 13px 57px;
+			text-transform: uppercase;
+			border-radius: 30px;
+			background-color: #2d2a6e;
+			color: #fff;
+			border: none !important;
+			display: inline-block;
+			text-align: center;
+			border-width: 2px;
+			border-style: solid;
+			margin-right: 20px;
+			outline: none !important;
+			margin-top: 20px;
+		}
+
+		.section-btn-2 {
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 19px;
+			padding: 13px 0px;
+			width: 200px !important;
+			text-transform: uppercase;
+			border-radius: 30px;
+			background-color: #96ae00;
+			color: #fff;
+			border: none !important;
+			text-align: center;
+			border-width: 2px;
+			border-style: solid;
+			outline: none !important;
+			margin-top: 20px;
+		}
+
+
+
+		.section-btn:hover {
+			background-color: #96ae00;
+		}
+
+		.section-btn-2:hover {
+			background-color: #2d2a6e;
+		}
+
+		.section-content-2,
+		.section-content-1 {
+			margin-left: 20px;
+		}
+
+		.card-2 {
+			border: none;
+			width: 100%;
+			position: relative;
+		}
+
+		.card-img-overlay {
+			position: absolute;
+			padding: 28px;
+			width: 100%;
+
+		}
+
+		.card-title2 {
+			font-size: 14px;
+			color: #ffb800;
+			font-weight: 600;
+		}
+
+		.card-text2 {
+			font-family: 'Quicksand', sans-serif;
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 30px;
+			letter-spacing: -.03em;
+			margin-bottom: 20px;
+			color: #fff;
+			margin-top: 9px;
+			width: 170px;
+		}
+
+
+		.card-img-overlay:hover {
+			background-color: rgba(0, 0, 0, 0.458);
+			border-radius: 5px;
+		}
+
+		.card-text3 {
+			color: #fff;
+			font-size: 18px;
+		}
+
+		.card2:hover {
+			filter: brightness(0.5) !important;
+		}
+
+		.product-section {
+			text-align: center;
+		}
+
+
+		.nav {
+			border: none !important;
+			margin-left: 33%;
+		}
+
+		.nav-link {
+			color: #000;
+			border: none !important;
+			outline: none !important;
+			font-weight: 500;
+		}
+
+		.nav-link:hover {
+			color: #96ae00;
+		}
+
+		.nav-link.active {
+			background-color: #f2f2f68e !important;
+			border: none !important;
+			color: #96ae00 !important;
+		}
+
+		#product-img {
+			background-image: url("project-img/img_1_.png");
+			background-position: center center;
+			object-fit: cover;
+			max-width: 100%;
+			height: 700px;
+			padding: 14% 0;
+			position: relative;
+		}
+
+		.premium-para1 {
+
+			font-family: 'Schoolbell', cursive;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 25px;
+			margin-bottom: 10px;
+			text-align: left;
+			color: #fff;
+		}
+
+		.premium-section h3 {
+			margin: 0;
+		}
+
+		#drop-nav {
+			display: none;
+		}
+
+		.premium-section h3 strong {
+			font-family: 'Quicksand', sans-serif;
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 43px;
+			letter-spacing: -.03em;
+			margin-bottom: 0;
+			color: #fff;
+		}
+
+		.premium-para2 {
+			font-weight: 400;
+			line-height: 23px;
+			margin-bottom: 40px;
+			margin-top: 30px;
+			color: #fff;
+			font-size: 16px;
+		}
+
+		.premium-para-3 {
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 23px;
+			color: #fff;
+			margin-bottom: 30px;
+
+		}
+
+		.premium-btn {
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 19px;
+			padding: 13px 57px;
+			text-transform: uppercase;
+
+			border-radius: 30px;
+			background: #fff;
+			color: #96ae00;
+			border: none !important;
+			outline: none !important;
+			display: inline-block;
+			text-align: center;
+			border-width: 2px;
+			border-style: solid;
+			margin-right: 20px;
+		}
+
+		.premium-section {
+			position: absolute;
+			top: 20%;
+			left: 2%;
+		}
+
+
+		.blog-box {
+			padding: 0;
+			margin: 0;
+		}
+
+		.blog-box li {
+			display: inline;
+			font-size: 12px;
+			padding-left: 10px;
+			font-weight: 500;
+			color: #393d50;
+		}
+
+		#blog-list {
+			list-style: none;
+			color: #6d7d09
+		}
+
+		.blog-card .card-title {
+			font-family: 'Quicksand', sans-serif;
+			font-size: 18px;
+			font-weight: 700;
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			line-height: 23px;
+			max-height: initial;
+			text-transform: initial;
+			color: #2d2a6e;
+			height: 46px;
+		}
+
+		.blog-card .card-text {
+			font-size: 16px;
+			font-weight: 400;
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			line-height: 23px;
+			-webkit-line-clamp: 2;
+			max-height: initial;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			margin: 0;
+			color: #4d5574;
+		}
+
+		.blog-card {
+			border: none !important;
+		}
+
+		.blog-text {
+			font-size: 13px;
+			font-weight: 500;
+			line-height: 50px;
+			color: #95ae3c;
+			text-transform: uppercase;
+			text-decoration: none;
+			transition-duration: 0.8s;
+		}
+
+		.blog-text:hover {
+			color: #6d7d09;
+
+		}
+
+		.blog-card {
+
+			cursor: pointer;
+			overflow: hidden;
+		}
+
+
+		.blog-card img,
+		.footer-card img {
+			transform: scale(1);
+			transition-duration: 0.8s;
+		}
+
+		.blog-card:hover img {
+			transform: scale(1.1);
+			transition-duration: 0.8s;
+		}
+
+
+
+		.footer-card:hover img {
+			transform: scale(1.3);
+			transition-duration: 0.4s;
+		}
+
+		.fa-angle-double-right {
+			color: #6d7d09;
+			display: none;
+
+			font-size: 23px;
+		}
+
+		.blog-text:hover .fa-angle-double-right {
+			display: inherit;
+			transition-duration: 0.8s;
+		}
+
+		#footer-bg-img {
+			background-image: url("project-img/background-footer-top-2.png");
+			max-width: 100%;
+
+		}
+
+		.footer-card-container {
+			padding: 5% 0;
+		}
+
+		.footer-card-container li {
+			margin: 0 17px !important;
+			list-style: none;
+			display: inline;
+			float: left;
+			text-align: center;
+		}
+
+		.footer-card {
+
+			color: #fff;
+		}
+
+		.footer-card h5 {
+			font-family: 'Quicksand', sans-serif;
+			font-size: 12px;
+			margin-top: 15px;
+			line-height: 15px;
+			margin-bottom: 4px;
+		}
+
+		.footer-card p {
+			color: #b0afcc;
+			font-size: 13px;
+		}
+
+		footer {
+			border: none !important;
+			padding: 5% 0;
+		}
+
+		.box {
+			display: inline;
+			float: left;
+			color: #fff;
+		}
+
+		.box h4 {
+			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+			font-weight: 700;
+			line-height: 18px;
+			text-transform: uppercase;
+			position: relative;
+			margin-bottom: 0;
+			color: #fff;
+		}
+
+		.box p,
+		.time-box li {
+			color: #b0afcc;
+			font-size: 16px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+
+
+
+		.time-box li strong {
+			color: #ffff;
+		}
+
+		.time-box li,
+		.hide-box li {
+			list-style: none;
+		}
+
+		.hide-box li {
+			font-weight: 400;
+			line-height: 35px;
+			transition: all .3s ease;
+			color: #2d2a6e;
+			cursor: pointer;
+
+
+		}
+
+		.hide-box li:hover {
+			color: #fff;
+		}
+
+		.footer-midle-box,
+		.footer-midle-box-2,
+		.footer-midle-box-3 {
+			max-width: 100%;
+			float: left;
+			display: inline;
+		}
+
+		.social-icon-box {
+			margin-top: 40px;
+		}
+
+		.social-icon,
+		.time-box,
+		.hide-box {
+			padding: 0;
+
+		}
+
+		.social-icon li {
+			display: inline;
+			list-style: none;
+			padding: 7px;
+			border-radius: 50%;
+			background-color: #fff;
+			margin-right: 5px;
+
+		}
+
+		.social-icon li i {
+			color: #2d2a6e;
+			font-size: 15px;
+		}
+
+		.social-icon li:hover {
+			background-color: #95ae3c;
+		}
+
+		.social-icon li:hover i {
+			color: #fff;
+		}
+
+		.f-link {
+
+			text-decoration: none;
+			color: rgb(160, 158, 158);
+			transition-duration: 1s;
+		}
+
+		.f-link:hover {
+			color: #fff;
+			transition-duration: 1s;
+		}
+
+		.footer-midle-box-3 p {
+			font-weight: 400;
+			line-height: 23px;
+			color: #fff;
+			font-size: 16px;
+			margin-bottom: 25px;
+		}
+
+		.personal-info i {
+			color: #4d5574;
+			margin: 15px;
+			font-size: 18px;
+		}
+
+		.personal-info {
+			width: 340px;
+			height: 50px;
+			background-color: #f3f3f9;
+		}
+
+		.personal-info input {
+			border: none !important;
+			outline: none !important;
+			line-height: 48px;
+			border-radius: 3px;
+
+			font-size: 14px;
+			font-weight: 400;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			padding: 0 10px;
+
+		}
+
+		.form-btn {
+			font-size: 14px;
+			height: 45px;
+			line-height: 43px;
+			padding: 0 30px;
+			border-radius: 30px;
+			text-transform: uppercase;
+			transition: all .3s ease;
+			text-align: center;
+			outline: none !important;
+			border-radius: 3px;
+			background: #96ae00;
+			color: #fff;
+			font-weight: 500;
+			border: none !important;
+			outline: none !important;
+			font-weight: 600;
+		}
+
+		.check-box {
+			margin-top: 20px;
+		}
+
+		.check-box input {
+			margin-top: 20px;
+		}
+
+		.check-box span {
+			margin-bottom: 0;
+			color: #fff;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 20px;
+			padding-left: 12px;
+		}
+
+		.footer-midle-box-3 {
+			border-left: 1px #fff;
+		}
+
+		.f-color {
+			background-color: #2d2c6e;
+			border-top: 1px solid gray;
+		}
+
+		.footer-bottom {
+			padding: 40px 0;
+			border-top-width: 1px;
+			border-top-style: solid;
+			border-color: #777879;
+			background-color: #2d2c6e;
+		}
+
+		.payment-img img {
+			margin-left: 45%;
+		}
+
+
+		.bottom-nav-bar {
+			background-color: #fff;
+			padding-left: 15px;
+			padding-right: 15px;
+			text-align: center;
+			border-radius: 30px;
+			position: sticky;
+			bottom: 0;
+			left: 0;
+			z-index: 9;
+			display: none;
+		}
+
+
+		.footer-nav {
+			padding: 15px 0;
+			margin: 0;
+		}
+
+		.footer-nav li {
+			list-style: none;
+			display: inline;
+			padding: 0 10%;
+			font-size: 20px;
+		}
+
+		.modal-title-1{
+			text-align: center !important;
+		}
+
+		.model-btn{
+			width: 80%;
+    font-size: 14px;
+    height: 45px;
+    line-height: 43px;
+  border: none;
+  background-color: #95ae3c;
+  color: #ffff;
+    padding: 0 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    text-align: center;
+    display: inline-block;
+    outline: none !important;
+    font-family: 'Quicksand',sans-serif;
+	margin-bottom: 20px;
+
+		}
+
+		.model-input{
+			height: 50px;
+    line-height: 48px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e6eaf0;
+    padding: 0 20px;
+    border-radius: 30px;
+    font-family: 'Jost',sans-serif;
+	margin-bottom: 20px;
+	display:block;
+	text-align: left;
+	background-color: #f3f3f9;
+	margin-top: 25px;
+		}
+
+		.modal-backdrop{
+			position: static !important;
+			top: 0;
+			left: 0;
+		}
+		.model-input input{
+			border: none;
+			outline: none;
+			background-color: #f3f3f9;
+		}
+
+		.model-input i{
+			color:#aeaeb1 ;
+		}
+
+		@media(max-width: 768px) {
+			.top-main-right {
+				display: none;
+				text-align: center;
+			}
+
+			.item-content {
+				top: 3%;
+			}
+
+			.logo {
+				text-align: center;
+			}
+
+			.bg-white {
+
+				padding-top: 19px;
+			}
+
+			.item-content h4 {
+				margin-bottom: 10px;
+			}
+
+			.item-content h3 {
+				font-size: 35px;
+				line-height: 40px;
+				margin-bottom: 15px;
+			}
+
+			.item-content P {
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+
+			.nav-user {
+				display: none !important;
+			}
+
+			.nav-heart {
+				display: none !important;
+			}
+
+			.nav-hide {
+				display: none !important;
+			}
+
+			.hambuger-manu {
+				display: block;
+			}
+
+			#navbar {
+				flex-direction: column;
+				background-color: #2d2a6e;
+				position: fixed;
+				top: 0%;
+				height: 500px;
+				width: 300px;
+				left: -300px;
+				justify-content: flex-start;
+				align-items: flex-start;
+				transition: 0.5s all;
+				padding: 60px 0 0 10px;
+				z-index: 9;
+				display: block;
+			}
+
+			#navbar li a {
+				margin-bottom: 1rem;
+				color: #fff;
+				padding: 10px;
+				display: block;
+				font-size: 16px;
+				border-bottom-width: 1px;
+				border-bottom-style: dotted;
+				border-color: #e6eaf03b;
+				text-align: initial;
+				text-decoration: none;
+			}
+
+
+
+			.bottom-nav-bar {
+				display: block;
+			}
+
+			#close {
+				position: absolute;
+				top: 0px;
+				left: 0%;
+				color: rgb(252, 251, 251);
+				font-size: 14px;
+				width: 100%;
+				background-color: #96ae00;
+				text-align: center;
+				padding: 10px;
+				font-weight: 600;
+				z-index: 1;
+				cursor: pointer;
+				letter-spacing: 1px;
+			}
+
+			#hamburger {
+				display: block;
+			}
+
+			#close img {
+				padding-bottom: 3px;
+				filter: invert(100%);
+			}
+
+			#navbar.active {
+				right: 0px;
+			}
+
+			.tab-box {
+				margin-left: 22px;
+				margin-bottom: 20px;
+			}
+
+
+			.side-bar-tab.active {
+				background-color: #96ae00;
+				color: #fff;
+			}
+
+			.side-bar-tab:hover {
+				background-color: #96ae00;
+				color: #fff;
+			}
+
+			.side-bar-tab {
+				font-family: 'Quicksand', sans-serif;
+				background: #fff;
+				color: #2d2a6e;
+				font-size: 13px;
+				border: none;
+				outline: none;
+				padding: 8px 9px;
+				display: inline;
+				margin: 0 !important;
+			}
+
+			.footer-card-container li {
+				margin: 0 !important;
+			}
+
+			.footer-card {
+				margin: 20px 20px;
+				color: #fff;
+			}
+
+			.small-section-1 {
+				width: 320px !important;
+			}
+
+			.card-2 {
+
+				margin-top: 20px !important;
+			}
+
+			.card-img-overlay {
+				position: absolute;
+				padding: 28px;
+				top: 25%;
+				width: 100%;
+			}
+
+			.nav {
+				border: none !important;
+				margin-left: 20%;
+			}
+
+			.payment-img img {
+				margin-left: 20%;
+			}
+
+
+			/* .owl-carousel .owl-item img {
+				margin: 0 22px;
+			} */
+
+			.catgory-img img {
+				margin-left: 30px;
+			}
+
+			.footer-card img {
+				margin-top: -5px;
+			}
+
+			#drop-nav {
+				display: none !important;
+			}
+
+
+
+		}
+
+		@media(max-width: 500px) {
+			.nav-icon {
+				float: left;
+				padding: 0;
+			}
+
+			.card-img-overlay {
+				position: absolute;
+				padding: 25px;
+				top: 0%;
+
+			}
+
+			#drop-nav {
+				display: block !important;
+			}
+
+			.item-content h4 {
+				display: none;
+				margin-bottom: 10px;
+			}
+
+			.item-content p {
+				display: none;
+			}
+
+			.item-content h3 {
+				font-size: 28px;
+				font-family: 'Quicksand', sans-serif;
+			}
+
+			/* .section-content-2 {
+				display: none;
+			} */
+
+			.item-content {
+				top: 0%;
+			}
+
+			.owl-carousel .owl-nav button.owl-next,
+			.owl-carousel .owl-nav button.owl-prev {
+				display: none;
+			}
+
+
+
+			.logo {
+				text-align: center;
+				padding: 10px 0;
+			}
+
+			.nav-bag {
+				display: none !important;
+			}
+
+			.nav-search {
+				position: absolute;
+				top: 15%;
+				right: 5%;
+			}
+
+			.nav-search i {
+				position: absolute;
+				top: 30%;
+				left: 33%;
+			}
+
+			.bg-white {
+				padding-top: 0px;
+			}
+
+			#ham {
+				margin-top: 20px;
+			}
+
+			.demo-1 {
+				padding: 30px 0;
+			}
+
+			.b-1 {
+				background-color: #ffff;
+			}
+
+			.demo-1 .item img {
+				height: auto;
+			}
+
+			.section-img img {
+				max-width: 100%;
+			}
+
+			.section-main-heading {
+				font-size: 1.9rem;
+			}
+
+			.section-para {
+				font-size: 14px;
+				margin: 0;
+			}
+
+			.card-2 {
+				margin-top: 15px;
+			}
+
+			.nav-tabs {
+				display: none;
+			}
+
+			.premium-btn {
+				padding: 13px 45px;
+			}
+
+			.footer-card-container {
+				padding-top: 50px;
+			}
+
+			.footer-bottom p {
+				text-align: center;
+			}
+
+			.payment-img img {
+				margin-left: 30px;
+			}
+
+
+			.section-btn-2 {
+				width: 240px !important;
+				margin-left: 30%;
+			}
+
+			.section-content-2,
+			.section-content-1 {
+				margin-left: 0px !important;
+			}
+
+			.section-btn {
+				margin-bottom: 20px !important;
+			}
+
+			.section-btn {
+				width: 240px;
+				margin-left: 45px;
+			}
+
+
+			.small-section-1,
+			.small-section-2 {
+				width: 249px;
+				margin-top: 30px;
+			}
+
+			.fa-th-large {
+				color: #5f5f60 !important;
+				font-size: 20px;
+			}
+
+			.drop-nav-link {
+				list-style: none;
+				color: #4d5574;
+				cursor: pointer;
+				margin-bottom: 15px;
+			}
+
+			.drop-nav-link.active {
+				color: #95ae3c;
+			}
+
+			.bottom-nav-bar {
+				display: block;
+			}
+
+			.footer-nav li {
+				padding: 0px 9%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid bg-color">
+		<div class="container">
+			<div class="row pt-2">
+				<div class="col-md-12 col-lg-6">
+					<div class="top-main-left">
+						<p>Due to the <span style="color:#ffb800 ;">COVID-19</span> epidemic, orders may be processed
+							with a slight delay.</p>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<ul class="top-main-right">
+						<li class="top-link">
+							<a href="" class="top-store">Store Location</a>
+						</li>
+						<li class="top-link">
+							<a href="" class="top-store">Order Tracking</a>
+						</li>
+						<li class="top-link">
+							<a href="" class="top-store">FAQs</a>
+						</li>
+						<li class="top-link">
+							<a href="" class="english">
+								<span>Language
+									English 1<img src="project-img/chevron-down.svg" class="down-arrow-img" alt=""></a>
+						</li>
+						<li class="top-link">
+							<a href="">
+								<span> USD</span> <img src="project-img/chevron-down.svg" class="down-arrow-img"
+									alt=""></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid   bg-white">
+		<div class="container">
+			<div class="row">
+
+				<ul id="navbar">
+					<div id="close"><strong>CLOSE</strong> <img src="project-img/x-lg.svg" alt=""></div>
+					<div class="tab-box">
+						<button class="side-bar-tab active">MENU</button>
+						<button class="side-bar-tab">ACCOUNT</button>
+						<button class="side-bar-tab">SETTINGS</button>
+					</div>
+
+					<li class="nav-list1"><a href="">Shop <img src="project-img/chevron-down.svg" class="down-arrow-img"
+								alt=""> </a></li>
+
+					<li class="nav-list1"><a href="">Vegetables <img src="project-img/chevron-down.svg"
+								class="down-arrow-img" alt=""> </a></li>
+					<li class="nav-list1"><a href="">Fresh Fruits<img src="project-img/chevron-down.svg"
+								class="down-arrow-img" alt=""> </a></li>
+					<li class="nav-list1"><a href="">Fruit Drink</a></li>
+					<li class="nav-list1"><a href="">Fresh Bakery</a></li>
+					<li class="nav-list1 active"><a href=""> <img src="project-img/chevron-down.svg"
+								class="down-arrow-img" alt=""> Fresh Milk</a></li>
+					<li class="nav-list1 active"><a href="">Sea Foods <img src="project-img/chevron-down.svg"
+								class="down-arrow-img" alt=""> </a></li>
+					<li class="nav-list1 active"><a href="">Cras Ultrices <img src="project-img/chevron-down.svg"
+								class="down-arrow-img" alt=""> </a></li>
+					<li class="nav-list1 active"><a href="">LoveSeats<img src="project-img/chevron-down.svg"
+								class="down-arrow-img" alt=""> </a></li>
+					<li class="nav-list1 active"><a href="">Pages <img src="project-img/chevron-down.svg"
+								class="down-arrow-img" alt=""> </a></li>
+					<li class="nav-list1 active"><a href="">Blog<img src="project-img/chevron-down.svg"
+								class="down-arrow-img" alt=""> </a></li>
+					<li class="nav-list1 active"><a href="">About Us<img src="project-img/chevron-down.svg"
+								class="down-arrow-img" alt=""> </a></li>
+					<li class="nav-list1 active"><a href="">Contact Us <img src="project-img/chevron-down.svg"
+								class="down-arrow-img" alt=""> </a></li>
+				</ul>
+				<div class="col-md-4 col-2 hambuger-manu">
+					<div id="ham">
+						<i class="fa fa-bars" id="hamburger"></i>
+
+					</div>
+
+
+
+				</div>
+
+				<div class="col-md-4 col-lg-2 col-6 p-0">
+					<div class="logo">
+						<img src="https://m2.alothemes.com/orfarm/media/logo/stores/1/Logo.png" alt="">
+					</div>
+				</div>
+
+				<div class="col-lg-7 nav-hide">
+					<ul class="nav-bar">
+
+						<li class="nav-list active"><a href="">Home <img src="project-img/chevron-down.svg"
+									class="down-arrow-img" alt=""> </a></li>
+						<li class="nav-list"><a href="">Shop <img src="project-img/chevron-down.svg"
+									class="down-arrow-img" alt=""> </a></li>
+						<li class="nav-list"><span class="new ">New</span><a href="">Pages <img
+									src="project-img/chevron-down.svg" class="down-arrow-img" alt=""> </a></li>
+						<li class="nav-list"><span class="hot ">Hot</span><a href="">Blogs <img
+									src="project-img/chevron-down.svg" class="down-arrow-img" alt=""> </a></li>
+						<li class="nav-list"><a href="">About Us</a></li>
+						<li class="nav-list"><a href="">Contact Us</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 col-4 col-lg-3">
+					<ul class="nav-icon">
+						<li class="nav-search"><i class="fa fa-search"></i></li>
+						<li class=" nav-user" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="project-img/person.svg" alt="">
+					
+  
+						
+							
+ 
+
+					
+					  
+					  <!-- Modal -->
+					  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+						  <div class="modal-content">
+							<div class="modal-header">
+							
+							  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<h1 style="text-align: center; font-size: 18px;" >Sing in</h1>
+
+								<form action="" class="model-form">
+									<span class="model-input"><i class="fa fa-envelope-o"></i> <input type="email" placeholder="Email"></span>
+									<span class="model-input"><i class="fa fa-lock"></i> <input type="password" placeholder="password"></span>
+									<p style="text-align: center; font-size:14px;">Forgot Your Password?</p>
+									<button class="model-btn">SING IN</button>
+									<button class="model-btn">CREATE AN ACCOUNT</button>
+								</form>
+							</div>
+							<!-- <div class="modal-footer">
+							  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							  <button type="button" class="btn btn-primary">Save changes</button>
+							</div> -->
+						  </div>
+						</div>
+					  </div>
+					
+
+						
+						</li>
+						<li class="nav-heart"><i class="fa fa-heart-o"></i></li>
+						<li class="nav-bag"><img src="project-img/bag.svg" alt=""></li>
+					</ul>
+				</div>
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+	
+
+	<div class="container-fluid p-0 b-1">
+		<div class="demo-1 owl-carousel owl-theme">
+
+			<div class="item">
+				<img src="project-img/slider1.png" />
+				<div class="item-content  ">
+					<h4>Pure and Nature 100%</h4>
+					<h3>The Best <br>Health & Fresh. </h3>
+					<p>Presentation matters. Our fresh Vietnamese vegetable rolls<br>look good and taste
+						even
+						better.</p>
+					<button class="slide-btn">SHOP NOW</button>
+				</div>
+
+
+
+			</div>
+
+			<div class="item">
+				<img src="project-img/slide2.png" />
+				<div class="item-content ">
+					<h4>WELCOME TO OUR FARM</h4>
+					<h3> Fresh Bread <br> Oatmeal Crumble.</h3>
+					<p>Presentation matters. Our fresh Vietnamese vegetable rolls <br>
+						look good and taste even better.</p>
+					<button class="slide-btn">SHOP NOW</button>
+				</div>
+
+
+
+
+
+			</div>
+
+
+			<div class="item">
+
+				<img src="project-img/slide3.png" />
+				<div class="item-content ">
+					<h4>Top Seller In The Week</h4>
+					<h3>Choose Your <br> Healthy Lifestyle.</h3>
+					<p>Presentation matters. Our fresh Vietnamese vegetable rolls <br>
+						look good and taste even better.</p>
+					<button class="slide-btn">SHOP NOW</button>
+				</div>
+
+
+			</div>
+
+
+
+		</div>
+
+	</div>
+
+	<div class="container-fluid mt-4">
+		<div class="container">
+			<div class="row">
+				<div class="demo-3 owl-carousel owl-theme">
+					<div class="item">
+						<div class="catgory-box">
+							<div class="catgory-img">
+								<img src="project-img/Biscuits_Snack.jpg" alt="">
+							</div>
+							<div class="catgory-content">
+								<h4 class="catgory-item-name">
+									Biscuits
+								</h4>
+
+								<div class="item-amount">18 Items</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="catgory-box">
+							<div class="catgory-img">
+								<img src="project-img/Fresh_Bakery.jpg" alt="">
+							</div>
+							<div class="catgory-content">
+								<h4 class="catgory-item-name">
+									Fresh Bakery
+								</h4>
+
+								<div class="item-amount">18 Items</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="catgory-box">
+							<div class="catgory-img">
+								<img src="project-img/Fresh_Fruits_1.jpg" alt="">
+							</div>
+							<div class="catgory-content">
+								<h4 class="catgory-item-name">
+									Fresh Fruits
+								</h4>
+
+								<div class="item-amount">17 Items</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="catgory-box">
+							<div class="catgory-img">
+								<img src="project-img/Fresh_Meat.jpg" alt="">
+							</div>
+							<div class="catgory-content">
+								<h4 class="catgory-item-name">
+									Fresh Meat
+								</h4>
+
+								<div class="item-amount">18 Items</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="catgory-box">
+							<div class="catgory-img">
+								<img src="project-img/Fresh_Milk.jpg" alt="">
+							</div>
+							<div class="catgory-content">
+								<h4 class="catgory-item-name">
+									Fresh Milk
+								</h4>
+
+								<div class="item-amount">19 Items</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="catgory-box">
+							<div class="catgory-img">
+								<img src="project-img/Fruit_Drink.jpg" alt="">
+							</div>
+							<div class="catgory-content">
+								<h4 class="catgory-item-name">
+									Fruits Drink
+								</h4>
+
+								<div class="item-amount">18 Items</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="catgory-box">
+							<div class="catgory-img">
+								<img src="project-img/Sea_Foods_1_1.jpg" alt="">
+							</div>
+							<div class="catgory-content">
+								<h4 class="catgory-item-name">
+									Sea Foods
+								</h4>
+
+								<div class="item-amount">20 Items</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="food-offer-container">
+						<h3 class="pro-heading">~ Special Products ~</h3>
+						<h2>WEEKLY FOOD OFFERS</h2>
+						<p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
+					</div>
+				</div>
+
+				<div class="demo-4 owl-carousel owl-theme mt-3">
+					<div class="item animate-box">
+						<div class="card" style="width:  ; border: none;">
+							<div class="img-hover">
+								<div class="sale-box">
+									<span class="sale"><strong>New</strong></span>
+								</div>
+								<div class="button-box">
+									<ul class="icon-btn">
+										<li class="icon-1"><span class="quick-link">WishList</span><i
+												class="fa fa-heart-o"></i></li>
+										<li class="icon-1"><span class="quick-link">Compare</span> <i
+												class="fa fa-database"></i></li>
+										<li class="icon-1"><span class="quick-link">Quick View</span><i
+												class="fa fa-eye"></i></li>
+
+									</ul>
+								</div>
+								<span class="img-box">
+									<img src="project-img/10_1_8.jpg" class="card-img-top" alt="...">
+								</span>
+								<span class="img-box2">
+									<img src="project-img/2_66.jpg" alt="">
+								</span>
+
+							</div>
+							<div class="card-body-1">
+								<h5 class="card-title-1">Sets</h5>
+
+								<p class="card-text-1">Fresh Mangosteen 100% Organic From Spainish</p>
+								<div class="price">$600.00</div>
+								<a href="#" class="cart-btn">Add To Cart</a>
+
+							</div>
+						</div>
+					</div>
+
+
+					<div class="item animate-box">
+
+						<div class="card" style="width: ; border: none;">
+							<div class="img-hover">
+								<div class="sale-box">
+									<span class="sale"><strong>New</strong></span>
+								</div>
+								<div class="button-box">
+									<ul class="icon-btn">
+										<li class="icon-1"><i class="fa fa-heart-o"></i></li>
+										<li class="icon-1"> <i class="fa fa-database"></i></li>
+										<li class="icon-1"><i class="fa fa-eye"></i></li>
+
+									</ul>
+								</div>
+								<span class="img-box">
+									<img src="project-img/22_2_11.jpg" class="card-img-top" alt="...">
+								</span>
+								<span class="img-box2">
+									<img src="project-img/23_1.jpg" alt="">
+								</span>
+
+							</div>
+							<div class="card-body-1">
+								<h5 class="card-title-1">Message & Releaction</h5>
+								<p class="card-text-1">VietNamese Specialty Fresh Litchi, Plump Fruit </p>
+								<div class="price">$600.00</div>
+								<a href="#" class="cart-btn">Add To Cart</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="item animate-box">
+						<div class="card" style="width: ; border: none;">
+							<div class="img-hover">
+								<div class="sale-box">
+									<span class="sale"><strong>New</strong></span>
+								</div>
+								<div class="button-box">
+									<ul class="icon-btn">
+										<li class="icon-1"><span class="quick-link">WishList</span><i
+												class="fa fa-heart-o"></i></li>
+										<li class="icon-1"><span class="quick-link">Compare</span> <i
+												class="fa fa-database"></i></li>
+										<li class="icon-1"><span class="quick-link">Quick View</span><i
+												class="fa fa-eye"></i></li>
+
+									</ul>
+								</div>
+								<span class="img-box">
+									<img src="project-img/5_1_1.jpg" class="card-img-top" alt="...">
+								</span>
+								<span class="img-box2">
+									<img src="project-img/4_37_5.jpg" alt="">
+								</span>
+
+							</div>
+							<div class="card-body-1">
+								<h5 class="card-title-1">Shop layout</h5>
+								<p class="card-text-1"> Fresh Mangosteen 100% Organic From USA </p>
+								<div class="price">$600.00</div>
+								<a href="#" class=" cart-btn">Add To Cart</a>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="item animate-box">
+						<div class="card" style="width: ; border: none;">
+							<div class="img-hover">
+								<div class="sale-box1">
+									<span class="sale"><strong>-22%</strong></span>
+								</div>
+								<div class="button-box">
+									<ul class="icon-btn">
+										<li class="icon-1"><span class="quick-link">WishList</span><i
+												class="fa fa-heart-o"></i></li>
+										<li class="icon-1"><span class="quick-link">Compare</span> <i
+												class="fa fa-database"></i></li>
+										<li class="icon-1"><span class="quick-link">Quick View</span><i
+												class="fa fa-eye"></i></li>
+
+									</ul>
+								</div>
+								<span class="img-box">
+									<img src="project-img/2_66.jpg" class="card-img-top" alt="...">
+								</span>
+								<span class="img-box2">
+									<img src="project-img/20.jpg" alt="">
+								</span>
+
+							</div>
+							<div class="card-body-1">
+								<h5 class="card-title-1">Loungers</h5>
+								<p class="card-text-1"> Fresh Mangosteen 100% Organic From Spainish </p>
+								<div class="price">$600.00</div>
+								<a href="#" class="cart-btn">Add To Cart</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="item animate-box">
+						<div class="card" style="width: ; border: none;">
+							<div class="img-hover">
+								<div class="sale-box1">
+									<span class="sale"><strong>-17%</strong></span>
+								</div>
+								<div class="button-box">
+									<ul class="icon-btn">
+										<li class="icon-1"><span class="quick-link">WishList</span><i
+												class="fa fa-heart-o"></i></li>
+										<li class="icon-1"><span class="quick-link">Compare</span> <i
+												class="fa fa-database"></i></li>
+										<li class="icon-1"><span class="quick-link">Quick View</span><i
+												class="fa fa-eye"></i></li>
+
+									</ul>
+								</div>
+								<span class="img-box">
+									<img src="project-img/19.jpg" class="card-img-top" alt="...">
+								</span>
+								<span class="img-box2">
+									<img src="project-img/10_1_8.jpg" alt="">
+								</span>
+
+							</div>
+							<div class="card-body-1">
+								<h5 class="card-title-1">Gel Nail Polish</h5>
+								<p class="card-text-1"> Fresh Mangostee 100% Organic From VietNamese </p>
+								<div class="price">$600.00</div>
+								<a href="#" class=" cart-btn">Add To Cart</a>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="item animate-box">
+						<div class="card" style="width: ; border: none;">
+							<div class="img-hover">
+								<div class="sale-box">
+									<span class="sale"><strong>New</strong></span>
+								</div>
+								<div class="button-box">
+									<ul class="icon-btn">
+										<li class="icon-1"><span class="quick-link">WishList</span><i
+												class="fa fa-heart-o"></i></li>
+										<li class="icon-1"><span class="quick-link">Compare</span> <i
+												class="fa fa-database"></i></li>
+										<li class="icon-1"><span class="quick-link">Quick View</span><i
+												class="fa fa-eye"></i></li>
+
+									</ul>
+								</div>
+								<span class="img-box">
+									<img src="project-img/20.jpg" class="card-img-top" alt="...">
+								</span>
+								<span class="img-box2">
+									<img src="project-img/24_1.jpg" alt="">
+								</span>
+
+							</div>
+							<div class="card-body-1">
+								<h5 class="card-title-1">Product categories</h5>
+								<p class="card-text-1">Fresh Mangosteen 100% Organic From France</p>
+								<div class="price">$600.00</div>
+								<a href="#" class=" cart-btn">Add To Cart</a>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="item animate-box">
+						<div class="card" style="width: ; border: none;">
+							<div class="img-hover">
+
+								<div class="button-box">
+									<ul class="icon-btn">
+										<li class="icon-1"><span class="quick-link">WishList</span><i
+												class="fa fa-heart-o"></i></li>
+										<li class="icon-1"><span class="quick-link">Compare</span> <i
+												class="fa fa-database"></i></li>
+										<li class="icon-1"><span class="quick-link">Quick View</span><i
+												class="fa fa-eye"></i></li>
+
+									</ul>
+								</div>
+								<span class="img-box">
+									<img src="project-img/15_8.jpg" class="card-img-top" alt="...">
+								</span>
+								<span class="img-box2">
+									<img src="project-img/14_1_6.jpg" alt="">
+								</span>
+
+							</div>
+							<div class="card-body-1">
+								<h5 class="card-title-1">All Departments</h5>
+								<p class="card-text-1">Fresh Mangosteen 100% Organic From Pakistant</p>
+								<div class="price">$600.00</div>
+								<a href="#" class="cart-btn">Add To Cart</a>
+							</div>
+						</div>
+
+					</div>
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12 col-12">
+					<div class="section-img">
+						<img src="project-img/product-detail-media_1.png" alt="">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 col-12">
+					<div class="section-content-1 ">
+						<p class="section-heading">
+							~ The Best For Your ~
+						</p>
+						<h2 class="section-main-heading">
+							<strong><span style="color: #2d2a6e;">Organic Drinks</span></strong>
+							<br>
+							<strong><span style="color:#96ae00 ;">Easy Healthy</span>
+								<span style="color: #2d2a6e;">-Happy Life</span></strong>
+						</h2>
+						<p class="section-para">The liber tempor cum soluta nobis eleifend option congue
+							doming quod mazim placerat facer possim assum.</p>
+					</div>
+					<!-- <div class="col-lg-12"> -->
+					<div class="row">
+						<div class="section-content-2 ">
+							<div class="col-lg-6 col-6 col-md-6">
+								<div class="small-section-1 d-inline float-start">
+									<div class="fruit-heading">
+										<a href="">FRESH FRUITS:</a>
+										<p>Apples, Berries & Cherries</p>
+									</div>
+
+									<div class="fruit-heading ">
+										<a href="">EXPIRY DATE:</a>
+										<p>See on The Bottle Cap</p>
+									</div>
+
+									<button class="section-btn">Add To CART</button>
+								</div>
+							</div>
+							<div class="col-lg-6 col-6 col-md-6">
+								<div class="row">
+									<div class="small-section-2  float-start">
+										<div class="nutriants-heading">
+											<a href="">
+												INGREDIENT:</a>
+											<p>
+												Energy, Protein, Sugars</p>
+										</div>
+										<div class="nutriants-heading">
+											<a href="">
+
+												BOTLE SIZE:</a>
+											<p>
+												500ml - 1000ml
+											</p>
+										</div>
+
+										<button class="section-btn-2">VIEW MORE</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- </div> -->
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-12 col-12">
+					<div class="card-2 ">
+						<img src="project-img/banner_1__2.png" class="card-img" alt="...">
+						<div class="card-img-overlay">
+							<h5 class="card-title2">TOP OFFERS</h5>
+							<p class="card-text2">Eat Green
+								Best For Family</p>
+							<p class="card-text3"><small>Free Shipping 05km</small></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 col-12">
+					<div class="card-2 ">
+						<img src="project-img/banner_2__2.png" class="card-img" alt="...">
+						<div class="card-img-overlay">
+							<h5 class="card-title2" style="color: #fff;">WEEKEND DEALS</h5>
+							<p class="card-text2">Fresh Food
+								Restore Health</p>
+							<p class="card-text3"><small>Top Quality Products</small></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 col-12">
+					<div class="card-2 ">
+						<img src="project-img/banner_3__2.png" class="card-img" alt="...">
+						<div class="card-img-overlay">
+							<h5 class="card-title2">TOP SELLER</h5>
+							<p class="card-text2">Healthy
+								Fresh Free Bread</p>
+							<p class="card-text3"><small>Limited Time: Online Only!</small></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="product-section">
+						<span class="d-block pro-heading">~ Our Products ~</span>
+						<h3>WHAT'S HOT ITEMS</h3>
+
+
+						<div id="drop-nav">
+							<p>
+								<a class="" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+									aria-expanded="false" aria-controls="multiCollapseExample1"><i
+										class="fa fa-th-large"></i></a>
+
+							</p>
+							<div class="row">
+								<div class="col">
+									<div class="collapse multi-collapse" id="multiCollapseExample1">
+										<div class="card card-body" style="border: none !important;">
+											<ul style="padding: 0 !important;">
+												<li class="drop-nav-link active">All</li>
+												<li class="drop-nav-link"> Fresh Meat</li>
+												<li class="drop-nav-link"> Vegetables</li>
+												<li class="drop-nav-link"> Biskcuit Snack</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+
+
+						 <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+		  ...
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-primary">Save changes</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+									data-bs-target="#home-tab-pane" type="button" role="tab"
+									aria-controls="home-tab-pane" aria-selected="true">All</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+									data-bs-target="#profile-tab-pane" type="button" role="tab"
+									aria-controls="profile-tab-pane" aria-selected="false">Fresh Meat</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+									data-bs-target="#contact-tab-pane" type="button" role="tab"
+									aria-controls="contact-tab-pane" aria-selected="false">Vegetables</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="disabled-tab" data-bs-toggle="tab"
+									data-bs-target="#disabled-tab-pane" type="button" role="tab"
+									aria-controls="Biskcuit-tab-pane" aria-selected="false">Biskcuit Snack</button>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+								aria-labelledby="home-tab" tabindex="0">
+								<div class="demo-4 owl-carousel owl-theme mt-3">
+									<div class="item animate-box">
+										<div class="card" style="width:  ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/10_1_8.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/2_66.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+												<h5 class="card-title-1">Sets</h5>
+
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From Spainish</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item animate-box">
+
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><i class="fa fa-heart-o"></i></li>
+														<li class="icon-1"> <i class="fa fa-database"></i></li>
+														<li class="icon-1"><i class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/22_2_11.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/23_1.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+												<h5 class="card-title-1">Message & Releaction</h5>
+												<p class="card-text-1">VietNamese Specialty Fresh Litchi, Plump Fruit
+												</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/5_1_1.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/4_37_5.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+												<h5 class="card-title-1">Shop layout</h5>
+												<p class="card-text-1"> Fresh Mangosteen 100% Organic From USA </p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box1">
+													<span class="sale"><strong>-22%</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/2_66.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/20.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+												<h5 class="card-title-1">Loungers</h5>
+												<p class="card-text-1"> Fresh Mangosteen 100% Organic From Spainish </p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box1">
+													<span class="sale"><strong>-17%</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/19.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/10_1_8.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+												<h5 class="card-title-1">Gel Nail Polish</h5>
+												<p class="card-text-1"> Fresh Mangostee 100% Organic From VietNamese
+												</p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/20.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/24_1.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+												<h5 class="card-title-1">Product categories</h5>
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From France</p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/15_8.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/14_1_6.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+												<h5 class="card-title-1">All Departments</h5>
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From Pakistant</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+
+
+								</div>
+							</div>
+							<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+								aria-labelledby="profile-tab" tabindex="0">
+								<div class="demo-4 owl-carousel owl-theme mt-3">
+									<div class="item animate-box">
+										<div class="card" style="width:  ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/10_1_8.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/2_66.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From Spainish</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item animate-box">
+
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><i class="fa fa-heart-o"></i></li>
+														<li class="icon-1"> <i class="fa fa-database"></i></li>
+														<li class="icon-1"><i class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/22_2_11.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/23_1.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1">VietNamese Specialty Fresh Litchi, Plump Fruit
+												</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/5_1_1.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/4_37_5.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1"> Fresh Mangosteen 100% Organic From USA </p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box1">
+													<span class="sale"><strong>-22%</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/2_66.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/20.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1"> Fresh Mangosteen 100% Organic From Spainish </p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box1">
+													<span class="sale"><strong>-17%</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/19.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/10_1_8.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1"> Fresh Mangostee 100% Organic From VietNamese
+												</p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/20.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/24_1.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From France</p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/15_8.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/14_1_6.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From Pakistant</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+
+
+								</div>
+							</div>
+							<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+								aria-labelledby="contact-tab" tabindex="0">
+								<div class="demo-4 owl-carousel owl-theme mt-3">
+									<div class="item animate-box">
+										<div class="card" style="width:  ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/10_1_8.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/2_66.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From Spainish</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item animate-box">
+
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><i class="fa fa-heart-o"></i></li>
+														<li class="icon-1"> <i class="fa fa-database"></i></li>
+														<li class="icon-1"><i class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/22_2_11.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/23_1.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1">VietNamese Specialty Fresh Litchi, Plump Fruit
+												</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/5_1_1.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/4_37_5.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1"> Fresh Mangosteen 100% Organic From USA </p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box1">
+													<span class="sale"><strong>-22%</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/2_66.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/20.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1"> Fresh Mangosteen 100% Organic From Spainish </p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box1">
+													<span class="sale"><strong>-17%</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/19.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/10_1_8.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1"> Fresh Mangostee 100% Organic From VietNamese
+												</p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/20.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/24_1.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From France</p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/15_8.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/14_1_6.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+												<h5 class="card-title-1">All Departments</h5>
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From Pakistant</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+
+
+								</div>
+							</div>
+							<div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel"
+								aria-labelledby="disabled-tab" tabindex="0">
+								<div class="demo-4 owl-carousel owl-theme mt-3">
+									<div class="item animate-box">
+										<div class="card" style="width:  ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/10_1_8.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/2_66.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+												<h5 class="card-title-1">Sets</h5>
+
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From Spainish</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item animate-box">
+
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><i class="fa fa-heart-o"></i></li>
+														<li class="icon-1"> <i class="fa fa-database"></i></li>
+														<li class="icon-1"><i class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/22_2_11.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/23_1.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1">VietNamese Specialty Fresh Litchi, Plump Fruit
+												</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/5_1_1.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/4_37_5.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1"> Fresh Mangosteen 100% Organic From USA </p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box1">
+													<span class="sale"><strong>-22%</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/2_66.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/20.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1"> Fresh Mangosteen 100% Organic From Spainish </p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box1">
+													<span class="sale"><strong>-17%</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/19.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/10_1_8.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1"> Fresh Mangostee 100% Organic From VietNamese
+												</p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+												<div class="sale-box">
+													<span class="sale"><strong>New</strong></span>
+												</div>
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/20.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/24_1.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From France</p>
+												<div class="price">$600.00</div>
+												<a href="#" class=" cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+									<div class="item animate-box">
+										<div class="card" style="width: ; border: none;">
+											<div class="img-hover">
+
+												<div class="button-box">
+													<ul class="icon-btn">
+														<li class="icon-1"><span class="quick-link">WishList</span><i
+																class="fa fa-heart-o"></i></li>
+														<li class="icon-1"><span class="quick-link">Compare</span> <i
+																class="fa fa-database"></i></li>
+														<li class="icon-1"><span class="quick-link">Quick View</span><i
+																class="fa fa-eye"></i></li>
+
+													</ul>
+												</div>
+												<span class="img-box">
+													<img src="project-img/15_8.jpg" class="card-img-top" alt="...">
+												</span>
+												<span class="img-box2">
+													<img src="project-img/14_1_6.jpg" alt="">
+												</span>
+
+											</div>
+											<div class="card-body-1">
+												<p class="card-text-1">Fresh Mangosteen 100% Organic From Pakistant</p>
+												<div class="price">$600.00</div>
+												<a href="#" class="cart-btn">Add To Cart</a>
+											</div>
+										</div>
+
+									</div>
+
+
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p style="text-align: center; ">Discover thousands of other quality products. <span
+							style="color: #96ae00; font-size: 16px; font-weight: 500; cursor: pointer; margin-top: 21% !important;">Shop
+							All Products</span> </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid mt-5" id="product-img">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="premium-section">
+						<p class="premium-para1">~ Deals Of The Day ~</p>
+						<h3><strong>Premium Drinks</strong>
+							<br> <strong>Fresh Farm Product</strong>
+						</h3>
+						<p class="premium-para2">The liber tempor cum soluta nobis eleifend option congue <br>
+							doming quod mazim placerat facere possum assam going through.</p>
+
+						<p class="premium-para-3">HURRY UP! OFFER END IN:
+							<br> <strong>: : :</strong>
+
+						</p>
+						<button class="premium-btn">SHOP NOW</button>
+						<button class="premium-btn">VIEW MENU</button>
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="blog-section">
+						<p class="pro-heading ">~ Read Our Blog ~</p>
+						<h3>Latest Posts Blog</h3>
+						<p class="blog-para">The liber tempor cum soluta nobis eleifend option congue doming quod mazim.
+						</p>
+
+					</div>
+				</div>
+
+				<div class="demo-5 owl-carousel owl-theme">
+					<div class="item">
+						<div class="card blog-card" style="">
+							<img src="project-img/blog1-min.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<ul class="blog-box">
+									<li id="blog-list">NEWS</li>
+									<li> TONY JOHAN</li>
+									<li> JAN 03. 2020</li>
+								</ul>
+								<h5 class="card-title"> Avocado Grilled Salmon, Rich In Nutrients For The Body </h5>
+								<p class="card-text">Large tiles were arranged on the counter top plate near the window
+									of the living room, they were connected</p>
+								<a href="#" class=" blog-text"> Continue reading <i
+										class="fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="card blog-card" style="">
+							<img src="project-img/blog10-min2.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<ul class="blog-box">
+									<li id="blog-list">LIFE STYLE</li>
+									<li>BIHN DONGVAN</li>
+									<li>JAN 03 2021</li>
+								</ul>
+								<h5 class="card-title"> Perfect Quality Reasonable Price For Your Family </h5>
+								<p class="card-text">Vivamus suscipit tortor eget felis porttitor volutpat. Cras
+									ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum
+									porta. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus
+									et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel,
+									ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Nulla
+									porttitor accumsan tincidunt. Proin eget tortor risus.</p>
+								<a href="#" class="blog-text"> Continue reading <i
+										class="fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="card blog-card" style="">
+							<img src="project-img/blog5-min.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<ul class="blog-box">
+									<li id="blog-list">DAIRY FARM</li>
+									<li>MAGPOW</li>
+									<li>JAN 03. 2020</li>
+								</ul>
+								<h5 class="card-title"> The Best Great Benefits Of Fresh Beef For Women's Health </h5>
+								<p class="card-text">Proin eget tortor risus. Cras ultricies ligula sed magna dictum
+									porta. Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula
+									sed magna dictum porta. Proin eget tortor risus. Vestibulum ante ipsum primis in
+									faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor
+									sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna
+									dictum porta. Nulla porttitor accumsan tincidunt. </p>
+								<a href="#" class=" blog-text"> Continue reading <i
+										class="fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="card blog-card" style="">
+							<img src="project-img/blog9-min.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<ul class="blog-box">
+									<li id="blog-list">LIFE STYLE</li>
+									<li>BIHN DONGVAN</li>
+									<li>JAN 03 2021</li>
+								</ul>
+								<h5 class="card-title"> Transition Your Favorite Looks into Fall France </h5>
+								<p class="card-text">These are the people who make your life easier. Large tiles were
+									arranged on the counter top plate near the …</p>
+								<a href="#" class="blog-text"> Continue reading <i
+										class="fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5 p-0" id="footer-bg-img">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="footer-card-container">
+						<li class="col-lg-2 col-12 col-md-6">
+							<div class="footer-card">
+								<img src="project-img/icon-delivery.png" alt="">
+								<h5>FAST DELIVERY</h5>
+								<p>Across West & East India</p>
+							</div>
+						</li>
+						<li class="col-lg-2 col-12 col-md-6">
+							<div class="footer-card">
+								<img src="project-img/icon-payment.png" alt="">
+								<h5>SAFE PAYMENT</h5>
+								<p>100% Secure Payment</p>
+							</div>
+						</li>
+						<li class="col-lg-2 col-12 col-md-6">
+							<div class="footer-card">
+								<img src="project-img/icon-discount.png" alt="">
+								<h5>ONLINE DISCOUNT</h5>
+								<p>Add Multi-buy Discount</p>
+							</div>
+						</li>
+						<li class="col-lg-2 col-12 col-md-6">
+							<div class="footer-card">
+								<img src="project-img/icon-support.png" alt="">
+								<h5>HELP CENTER</h5>
+								<p>Dedicated 24/7 Support</p>
+							</div>
+						</li>
+						<li class="col-lg-2 col-12 col-md-12">
+							<div class="footer-card">
+								<img src="project-img/icon-curated.png" alt="">
+								<h5>CURATED ITEMS</h5>
+								<p>From Handpicked Sellers</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid f-color ">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+
+					<footer class="mt-4">
+						<div class="col-lg-3 col-12 col-md-6 box">
+							<div class="footer-midle-box">
+								<h4>LET US HELP YOU</h4>
+								<p>If you have any questions, please
+									<br>contact us at: <a href="" class="f-link">support@example.com</a>
+
+								</p>
+
+								<div class="social-icon-box">
+									<p>Social Media:</p>
+									<ul class="social-icon">
+										<li class="social"><i class="fa fa-facebook"></i></li>
+										<li class="social"><i class="fa fa-twitter"></i></li>
+										<li class="social"><i class="fa fa-instagram"></i></li>
+										<li class="social"><i class="fa fa-youtube"></i></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-lg-3 col-12 col-md-6 box">
+
+							<div class="footer-midle-box">
+								<h4>LOOKING FOR ORFARM?</h4>
+								<p>68 St. Vicent Place, Glasgow,
+									<br>Greater
+									<br>Newyork NH2012, UK.
+								</p>
+
+								<ul class="time-box">
+									<li>Monday - Friday: <strong>8:10 AM – 6:10 PM</strong>
+
+									</li>
+									<li>Saturday: <strong>10:10 AM – 06:10 PM</strong></li>
+									<li>Sunday: <strong> Close </strong></li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="col-lg-2 col-12 col-md-6 box">
+							<div class="footer-midle-box-2">
+								<h4>HOT CATEGORIES</h4>
+								<ul class="hide-box">
+									<li>Fruits & Vegetables</li>
+									<li>Dairy Products</li>
+									<li>Package Foods</li>
+									<li>Beverage</li>
+									<li>Health & Wellness</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4 col-12 col-md-6       box">
+							<div class="footer-midle-box-3">
+								<h4>OUR NEWSLETTER</h4>
+								<div class="news-box">
+									<p>Subscribe to the Orfarm mailing list to receive updates on new arrivals & other
+										information.</p>
+
+									<form action="">
+										<div class="mail">
+											<div class="personal-info">
+												<i class="fa fa-envelope-o"></i>
+												<input type="email" placeholder="Enter your Email..">
+												<button class="form-btn">Subscribe</button>
+											</div>
+											<div class="check-box">
+												<input type="checkbox"><span>I accept terms & conditions & privacy
+													policy.</span>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</footer>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="contianer-fluid footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-12">
+					<div class="footer-text">
+						<p style="color: #fff; ">Copyright © ORFARM all rights reserved.
+							Powered by <span style="color: #95ae3c;">Alothemes.</span></p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="payment-img">
+						<img src="project-img/payment.png" alt="">
+					</div>
+				</div>
+
+
+
+				<div class="col-lg12">
+					<div class="bottom-nav-bar">
+						<ul class="footer-nav">
+							<li><i class="fa fa-home"></i></li>
+							<li><i class="fa fa-th-large"></i></li>
+							<li> 0</li>
+							<li><i class="fa fa-user"></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<script>
+
+		// nav bar
+		var a = document.querySelector("#navbar");
+		var btn = document.querySelector(" #hamburger");
+
+
+		var colorChange = 0
+
+		btn.addEventListener("click", () => {
+			console.log("clicked")
+
+			if (colorChange == 0) {
+				a.style.left = "0px"
+
+				colorChange = 1
+			}
+
+			var cross = document.querySelector("#close").addEventListener("click", () => {
+				a.style.left = "-300px"
+				console.log("again clicked")
+				colorChange = 0
+			})
+
+		})
+
+
+
+		// home slider 
+		$(document).ready(function () {
+			$('.demo-1').owlCarousel({
+				items: 1,
+				loop: true,
+				dots: true,
+				nav: true,
+				loop: true,
+				autoplay: true,
+				autoplayTimeout: 2000,
+				autoplayHoverPause: true
+			});
+		})
+
+		// six item-slider
+
+
+		$(document).ready(function () {
+			$('.demo-3').owlCarousel({
+				loop: true,
+				dots: false,
+				nav: false,
+				loop: true,
+				margin: 10,
+				autoplay: false,
+				autoplayTimeout: 10000,
+				autoplayHoverPause: true,
+				responsive: {
+					0: {
+						items: 2
+					},
+					600: {
+						items: 4
+					},
+					1000: {
+						items: 6
+					}
+				}
+			});
+		})
+
+
+		// 5 item slider
+
+		$(document).ready(function () {
+			$('.demo-4').owlCarousel({
+				loop: true,
+				dots: false,
+				nav: true,
+				loop: true,
+				margin: 10,
+				autoplay: true,
+				autoplayTimeout: 2000,
+				autoplayHoverPause: true,
+				responsive: {
+					0: {
+						items: 1
+					},
+					600: {
+						items: 3
+					},
+					1000: {
+						items: 5
+					}
+				}
+			});
+		})
+
+		// blog slider
+
+		$(document).ready(function () {
+			$('.demo-5').owlCarousel({
+				loop: true,
+				dots: false,
+				nav: false,
+				loop: true,
+				margin: 20,
+				autoplay: false,
+				autoplayTimeout: 10000,
+				autoplayHoverPause: true,
+				responsive: {
+					0: {
+						items: 1
+					},
+					600: {
+						items: 2
+					},
+					1000: {
+						items: 3
+					}
+				}
+			});
+		})
+	</script>
+    
+    
+    <style>
+#move-top {
+    position: fixed;
+    bottom: 20px;
+    background: #4CAF50;
+    right: 20px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+	height: 40px;
+    width: 40px;
+    line-height: 40px;
+	cursor:pointer;
+	display:none;
+}
+</style>
+<span onclick="movetop()" id="move-top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></span>
+<script>
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("move-top").style.display = "block";
+	document.getElementById("sticky-head").style.position = "fixed";
+  } else {
+    document.getElementById("move-top").style.display = "none";
+	document.getElementById("sticky-head").style.position = "relative";
+  }
+}
+function movetop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+
+</html>
